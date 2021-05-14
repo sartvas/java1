@@ -3,15 +3,25 @@ public class BankAccount {
     int age;
     double money;
 
+    double increaseBalance (double increaseMeaning) {
+        money+=increaseMeaning;
+        return money;
+    }
+
+    double reduceBalance (double reduceMeaning) {
+        money-=reduceMeaning;
+        return money;
+    }
+}
+
+class Operations {
     public static void main(String[] args) {
         BankAccount ba = new BankAccount();
-        BankAccount ba2 = new BankAccount();
         ba.name = "Artem";
         ba.age = 45;
-        double money = 10000.0;
-        ba = ba2;
-        ba2.name = "Ramil";
-
-        System.out.println(ba.name);
+        ba.money = 10000.0;
+        ba.reduceBalance(654);
+        ba.increaseBalance(789);
+        System.out.println(ba.money);
     }
 }
