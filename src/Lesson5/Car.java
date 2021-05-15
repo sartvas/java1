@@ -1,6 +1,11 @@
 package Lesson5;
 
 public class Car {
+    Car (String names, String numbers, int speeds) {
+        name=names;
+        number=numbers;
+        speed=speeds;
+    }
     String name;
     String number;
     int speed;
@@ -22,7 +27,7 @@ public class Car {
 
 class Cars {
     public static void main(String[] args) {
-        Car car1 = new Car();
+        Car car1 = new Car("Toyota","12",0);
         car1.name = "Toyota";
         car1.number = "12";
         car1.speed = 0;
