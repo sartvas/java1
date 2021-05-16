@@ -1,8 +1,8 @@
 package Lesson6;
 
 public class Overloading {
-    void show(int a){
-        System.out.println(a);
+    public void show(int a){
+        System.out.println(a+3);
     }
     void show(int a, int b){
         System.out.println(a);

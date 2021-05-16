@@ -11,7 +11,8 @@ public class Employee {
     }
 
     Employee(String surname2,int age2){
-        this(0,surname2,age2, 0.0,null)
+
+        this(0,surname2,age2, 0.0,null);
     }
 
     int id;
@@ -28,7 +29,7 @@ public class Employee {
 
 class Employees {
     public static void main(String[] args) {
-        Employee emp1 = new Employee("Savinykh", 35);
+        Employee emp1 = new Employee(23,"Savinykh", 35, 333.3, "IT");
 
         System.out.println("У сотрудника с фамилией "+emp1.surname+" id"+emp1.id+" из департамента "+emp1.depeartmnt+" зарплата составляет "+emp1.salary);
         emp1.upSalary(1.5);
