@@ -1,19 +1,17 @@
 package Lesson4;
 
 public class Student {
-    Student(int ids,String names, int subBiltNumbers, String surnames, int ages) {
-        id = ids;
-        name = names;
-        surname = surnames;
-        age = ages;
-        subBiltNumber = subBiltNumbers;
+    Student(int id,String name, String surname, int age, int subBiltNumber) {
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+        this.subBiltNumber = subBiltNumber;
 
     }
-    Student(int ids, String names, String surnames, int ages) {
-        this(ids,names,0,surnames,ages);
-    }
-    Student(){
-
+    Student(int id, String name){
+        this.id = id;
+        this.name = name;
     }
     int id;
     int subBiltNumber;
@@ -32,7 +30,7 @@ public class Student {
 class StudentTest {
     public static void main(String[] args) {
 
-        Student sudent1 = new Student();
+        Student sudent1 = new Student(12,"Artem");
 
         sudent1.avrMath = 4.5;
         sudent1.avrEcon = 3.5;
