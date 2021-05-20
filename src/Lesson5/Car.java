@@ -1,7 +1,7 @@
 package Lesson5;
 
 public class Car {
-    Car (String names, String numbers, int speeds) {
+    public  Car (String names, String numbers, int speeds) {
         name=names;
         number=numbers;
         speed=speeds;

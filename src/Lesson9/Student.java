@@ -1,6 +1,8 @@
 package Lesson9;
 
 public class Student {
+    public int id = 3;
+    public static String name  = "NewStudent";
 }
 
 class StudentTest {
