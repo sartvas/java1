@@ -23,7 +23,12 @@ public class Test1 {
 //        System.out.println(c == b);
         String ee = "qwertyuiop";
 //        System.out.println(ee.substring(1,ee.length()));
-        System.out.println(ee.replace("q", "Q"));
+        String tst22 = ee.replace('q', 'q');
+        String tst23 = ee.replace("q", "q");
+        String tst24 = ee.replace("q", "q");
+        System.out.println(tst22 == tst23);
+        System.out.println(tst23 == tst24);
+//        System.out.println(ee.replace('q', 'Q'));
 
     }
 }
