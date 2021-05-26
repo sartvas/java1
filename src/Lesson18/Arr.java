@@ -12,7 +12,6 @@ public class Arr {
         // System.out.println(mass[2][2]); // 7
 
         int [] arr1 = {1, 9, 4, -9, 34, 2};
-        int [] arr4 = {1, 9, 4, -9, 34, 2};
         for (int i = 0; i < arr1.length; i++){
             System.out.print(arr1[i] + " ");
         }
@@ -22,9 +21,5 @@ public class Arr {
             System.out.print(arr1[i] + " ");
         }
         System.out.println();
-        int index = Arrays.binarySearch(arr1, 2);
-        int index2 = Arrays.binarySearch(arr4, 2); // несортированный некорректно
-        System.out.println(index);
-        System.out.println(index2);
     }
 }
