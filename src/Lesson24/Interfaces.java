@@ -1,6 +1,10 @@
 package Lesson24;
 
 public class Interfaces {
+    public static void main(String[] args) {
+        HelpAble n = new Driver(); //объект интерфейса может ссылаться на Driver, \
+        //потому, что Driver implements HelpAble
+    }
 }
 
 class Employee{
@@ -51,7 +55,9 @@ interface HelpAble{
     void closeFire();
 }
 
-interface SwimAble{
+interface SwimAble extends HelpAble{
     void swim();
 }
+
+
 
