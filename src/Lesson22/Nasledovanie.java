@@ -7,12 +7,17 @@ public class Nasledovanie {
     }
 
     public static void main(String[] args) {
+
     Doctor doc1 = new Doctor();
     doc1.name = "ivan";
     doc1.eat();
     doc1.sleep();
     doc1.health();
+    Employee emp1 = new Doctor();
+    Doctor d1 = (Doctor)emp1;
+    ((Doctor) emp1).health();
 
+        System.out.println();
     }
 
 }
@@ -33,7 +38,7 @@ class Employee{
 
 class Doctor extends Employee {
     String special;
-    void health(){
+    public void health(){
         System.out.println("health");
     }
 }
