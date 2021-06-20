@@ -49,17 +49,28 @@ class StudentInfos {
         array.add(st5);
 
         StudentInfos si = new StudentInfos();
-        si.testStudentss(array, st -> st.avgGrade > 4); //(array, (Student st) -> {return st.avgGrade > 4;});
-        System.out.println("____________________");
-        si.testStudentss(array, st -> st.avgGrade < 4);
-        System.out.println("____________________");
-        si.testStudentss(array, st -> st.age > 30);
-        System.out.println("____________________");
-        si.testStudentss(array, (Student st) -> {return st.age < 30;});
-        System.out.println("____________________");
-        si.testStudentss(array, (Student st) -> {return st.sex == 'M';});
-        System.out.println("____________________");
-        si.testStudentss(array, (Student st) -> {return st.sex == 'W';});
+
+        for(Student s: array){
+            System.out.println(s.name);
+        }
+        System.out.println("________________________");
+        array.removeIf(x -> x.name.endsWith("a")); //единственный класс с предустановленным Predicate
+        for(Student s: array){
+            System.out.println(s.name);
+        }
+
+
+//        si.testStudentss(array, st -> st.avgGrade > 4); //(array, (Student st) -> {return st.avgGrade > 4;});
+//        System.out.println("____________________");
+//        si.testStudentss(array, st -> st.avgGrade < 4);
+//        System.out.println("____________________");
+//        si.testStudentss(array, st -> st.age > 30);
+//        System.out.println("____________________");
+//        si.testStudentss(array, (Student st) -> {return st.age < 30;});
+//        System.out.println("____________________");
+//        si.testStudentss(array, (Student st) -> {return st.sex == 'M';});
+//        System.out.println("____________________");
+//        si.testStudentss(array, (Student st) -> {return st.sex == 'W';});
 
     }
 }
