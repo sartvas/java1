@@ -83,7 +83,6 @@ class StudentInfo{
 
         StudentInfo si = new StudentInfo();
         si.printStudentOverGrade(array, 3);
-        si.printStudentSex('');
     }
 }
 
