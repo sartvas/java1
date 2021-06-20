@@ -1,6 +1,7 @@
 package Lesson30;
 
 import java.util.ArrayList;
+import java.util.function.Predicate;
 
 public class La3 {
 }
@@ -25,9 +26,10 @@ class StudentInfos {
         System.out.println("Name is " + st.name + ", i am " + st.age + " years old, i am suding on " + st.course + " course, in grade " + st.avgGrade);
     }
 
-    void testStudentss(ArrayList<Student> array, ChecksStudents sc){
+    //void testStudentss(ArrayList<Student> array, ChecksStudents sc){
+    void testStudentss(ArrayList<Student> array, Predicate <Student> t){ //Predicate - интерфейс с 1-м методом
         for(Student s: array){
-            if(sc.test(s)){
+            if(t.test(s)){
                 printStudent(s);
             }
         }
@@ -62,7 +64,8 @@ class StudentInfos {
     }
 }
 
-interface ChecksStudents {
-    boolean test(Student s);
-}
+//interface ChecksStudents {
+//    boolean test(Student s);
+//}
+
 
