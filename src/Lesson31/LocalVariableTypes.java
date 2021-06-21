@@ -16,3 +16,7 @@ public class LocalVariableTypes {
 class TestInfernceType{
 
 }
+
+interface iner{
+    void abc();
+}
