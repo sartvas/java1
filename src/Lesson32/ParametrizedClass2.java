@@ -3,6 +3,7 @@ package Lesson32;
 import com.sun.jdi.Value;
 
 import javax.swing.*;
+import java.util.ArrayList;
 
 public class ParametrizedClass2 {
     public static void main(String[] args) {
@@ -17,6 +18,9 @@ public class ParametrizedClass2 {
 
         OtherPair<Integer> otherPair2 = new OtherPair<>(23, 45);
         System.out.println("1st parameter is: "+otherPair2.getFirstValue()+"; 2nd parameter is: "+ otherPair2.getSecondValue());
+
+        ThirdClass<Integer> thrd = new ThirdClass<>(23, 56);
+        System.out.println("1st parameter is: "+thrd.getFirstValue()+"; 2nd parameter is: "+ thrd.getSecondValue());
 
     }
 }
@@ -51,6 +55,23 @@ class OtherPair<K>{ //если параметры одного типа, но и
         return value1;
     }
     public K getSecondValue(){
+        return value2;
+    }
+}
+
+class ThirdClass <L extends Number>{
+    private L value1;
+    private L value2;
+
+    public ThirdClass(L value1, L value2) {
+        this.value1 = value1;
+        this.value2 = value2;
+    }
+
+    public L getFirstValue(){
+        return value1;
+    }
+    public L getSecondValue(){
         return value2;
     }
 }
