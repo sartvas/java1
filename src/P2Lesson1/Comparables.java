@@ -2,10 +2,10 @@ package P2Lesson1;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.List;
+//Comparable have only compareTo
+//Comparator create new override methods
+
+import java.util.*;
 
 public class Comparables {
     public static void main(String[] args) {
@@ -24,7 +24,7 @@ public class Comparables {
         list.add(friend4);
         list.add(friend5);
 
-        Collections.sort(list);
+        Collections.sort(list, new NameComarator()); //если нужно более 2х сравнений, создаем класс, анонимный клас или лямбда
         System.out.println("\n"+list);
 
     }
@@ -51,5 +51,19 @@ class MyFriends implements Comparable<MyFriends>{
     @Override
     public int compareTo(@NotNull MyFriends o) {
         return this.sex-o.sex;
+    }
+}
+
+class AgeComparator implements Comparator<MyFriends>{
+    @Override
+    public int compare(MyFriends fr1, MyFriends fr2){
+        return fr1.age-fr2.age;
+    }
+}
+
+class NameComarator implements Comparator<MyFriends>{
+    @Override
+    public int compare(MyFriends fr1, MyFriends fr2){
+        return fr1.name.compareTo(fr2.name);
     }
 }
