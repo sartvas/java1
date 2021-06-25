@@ -6,10 +6,8 @@ package Lesson10;
 /*import Lesson9.Student;
 import Lesson4.Student;*/// нельзя импортировать Package с одинаковыми названиями отдельных классов
 
-import Lesson9.*; //импортирует все классы
-import Lesson5.*; //Если в Package со "*" есть одинаковые классы, нужно прописывать полный путь Lesson5.Car
-
-import Lesson9.New.AnotherClass; //Чтобы имортировать sub package нужно приписать полный путь до вложенного пакета
+import Lesson9.New.AnotherClass;
+import Lesson9.Student;
 
 public class A {
     public static void main(String[] args) {

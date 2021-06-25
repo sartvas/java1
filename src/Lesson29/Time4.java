@@ -1,6 +1,6 @@
 package Lesson29;
 
-import java.time.Duration; // Duration class
+import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.Period;

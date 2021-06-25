@@ -1,8 +1,5 @@
 package HomeWork20;
 
-import java.util.ArrayList;
-import java.util.LinkedHashSet;
-
 public class Test1 {
     public static String[] abc (String[]... array1){
         int legth = 0;

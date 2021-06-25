@@ -1,7 +1,5 @@
 package Lesson32;
 
-import Lesson10.A;
-
 import java.util.ArrayList;
 
 //Paramerized methods

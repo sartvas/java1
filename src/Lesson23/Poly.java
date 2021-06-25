@@ -1,9 +1,5 @@
 package Lesson23;
 
-import Lesson10.A;
-
-import java.lang.reflect.AnnotatedArrayType;
-
 public class Poly {
 
     void abc (Animals a) {

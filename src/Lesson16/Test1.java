@@ -1,7 +1,5 @@
 package Lesson16;
 
-import Lesson14.Test;
-
 public class Test1 {
     static void compare(){
         String a = "Privet";

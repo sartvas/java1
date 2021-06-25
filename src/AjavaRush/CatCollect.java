@@ -1,7 +1,6 @@
 package AjavaRush;
 
-import javax.sound.midi.Soundbank;
-import java.util.*;
+import java.util.HashMap;
 import java.util.Map;
 
 public class CatCollect {

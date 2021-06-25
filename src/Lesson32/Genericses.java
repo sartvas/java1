@@ -1,7 +1,5 @@
 package Lesson32;
 
-import java.util.ArrayList;
-
 //Важнейшая задача Generics - типобезопасность TYPE SAVE
 //Вторая причина - Reusable Code
 

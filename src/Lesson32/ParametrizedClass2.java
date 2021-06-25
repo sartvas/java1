@@ -1,10 +1,5 @@
 package Lesson32;
 
-import com.sun.jdi.Value;
-
-import javax.swing.*;
-import java.util.ArrayList;
-
 public class ParametrizedClass2 {
     public static void main(String[] args) {
         Pair<String, Integer> vl1 = new Pair<>("Artem", 35);

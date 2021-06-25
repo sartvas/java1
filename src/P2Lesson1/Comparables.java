@@ -2,10 +2,13 @@ package P2Lesson1;
 
 import org.jetbrains.annotations.NotNull;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
 //Comparable have only compareTo
 //Comparator create new override methods
-
-import java.util.*;
 
 public class Comparables {
     public static void main(String[] args) {

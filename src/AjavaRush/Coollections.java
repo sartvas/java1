@@ -1,6 +1,7 @@
 package AjavaRush;
 
-import java.util.*;
+import java.util.HashSet;
+import java.util.Set;
 
 public class Coollections {
     public static void main(String[] args) {

@@ -1,7 +1,5 @@
 package HomeWork24;
 
-import Lesson10.A;
-
 abstract class Animal {
     public String name;
     Animal(String name){

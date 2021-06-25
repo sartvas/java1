@@ -1,6 +1,8 @@
 package Lesson27;
 
-import java.io.*;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 
 public class Exception3 {
 

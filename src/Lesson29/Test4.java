@@ -1,7 +1,7 @@
 package Lesson29;
 
 import java.time.LocalDate;
-import java.time.Period; //новый класс period
+import java.time.Period;
 
 //methods Period.ofWeeks, Period.ofMonth, Period.ofYears, Period.ofDays
 

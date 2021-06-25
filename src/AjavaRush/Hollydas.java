@@ -1,5 +1,7 @@
 package AjavaRush;
-import java.util.*;
+
+import java.util.Scanner;
+
 public class Hollydas {
 
     public static void main(String[] args) {

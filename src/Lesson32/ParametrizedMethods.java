@@ -1,7 +1,6 @@
 package Lesson32;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ParametrizedMethods {
     public static void main(String[] args) {

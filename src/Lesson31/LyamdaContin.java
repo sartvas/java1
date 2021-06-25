@@ -1,7 +1,8 @@
 package Lesson31;
 
-import java.util.function.*;
 import java.util.ArrayList;
+import java.util.function.Consumer;
+import java.util.function.Supplier;
 
 public class LyamdaContin {
 }

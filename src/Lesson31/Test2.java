@@ -1,7 +1,5 @@
 package Lesson31;
 
-import Lesson10.A;
-
 import java.util.ArrayList;
 import java.util.List;
 
