@@ -15,16 +15,27 @@ public class AL2 {
         al.add(schooler2);
         al.add(schooler3);
         al.add(schooler4);
-        int index = al.indexOf(schooler1);
+        ArrayList<Schooler> al2 = new ArrayList<>();
+        al2.add(schooler3);
+        al2.add(schooler4);
+
         for (Schooler a:al){
             System.out.println("Студент с именем "+a.getName()+" и возрастом "+a.getAge()+" находится на индексе с позицией "+al.indexOf(a));
         }
+
         System.out.println("___isEmpty___");
         System.out.println(al.isEmpty());
-        System.out.println("___contains___");
-        System.out.println(al.contains("Andrew"));
-        System.out.println(al.contains("Vera"));
 
+        System.out.println("___contains___");
+        boolean Andrew = al.contains("Andrew");
+        boolean Vera = al.contains("Vera");
+        System.out.println(Andrew);
+        System.out.println(Vera);
+
+        System.out.println("___retainAll___");
+        System.out.println(al);
+        al.retainAll(al2);
+        System.out.println(al2);
 
     }
 }
