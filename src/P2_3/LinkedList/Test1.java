@@ -1,5 +1,6 @@
 package P2_3.LinkedList;
 
+import java.util.LinkedList;
 import java.util.Objects;
 
 public class Test1 {
@@ -9,6 +10,15 @@ public class Test1 {
         MyFriends friend3 = new MyFriends("Olga",28,'w',false);
         MyFriends friend4 = new MyFriends("Iraina",29,'w',true);
         MyFriends friend5 = new MyFriends("Oleg",30,'m',false);
+
+        LinkedList<MyFriends> myFriends = new LinkedList<>();
+        myFriends.add(friend1);
+        myFriends.add(friend2);
+        myFriends.add(friend3);
+        myFriends.add(friend4);
+        myFriends.add(1,friend5);
+
+        System.out.println(myFriends.get(2));
     }
 }
 
@@ -26,14 +36,8 @@ class MyFriends {
     }
 
     @Override
-    public boolean equals(Object o) {
-        if (this == o)
-            return true;
-        if (o == null || getClass() != o.getClass())
-            return false;
-        MyFriends myFriends = (MyFriends) o;
-        return age == myFriends.age && sex == myFriends.sex && married == myFriends.married && Objects.equals(name, myFriends.name);
+    public String toString() {
+        return "MyFriends{" + "name='" + name + '\'' + ", age=" + age + ", sex=" + sex + ", married=" + married + '}';
     }
-
 }
 
