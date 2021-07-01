@@ -39,6 +39,7 @@ public class Test {
         System.out.println(map1);
         //keySet - возвращает множество всех значений
         System.out.println(map1.values());
+        System.out.println("___containsKey___");
 
 
 

@@ -3,7 +3,7 @@ package P2_3.HashCode;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Objects;
-
+// !! уже не содержит ключ, поменялся hashCode!!
 public class Test {
     public static void main(String[] args) {
         Map<Student, Double> map = new HashMap<>();
@@ -16,6 +16,15 @@ public class Test {
 
         System.out.println(st1.hashCode());
         Student st4 = new Student("Igor", 33, 4);
+
+        for (Map.Entry<Student, Double> entry : map.entrySet()){
+            System.out.println(entry.getKey() + ":" + entry.getValue());
+        }
+        System.out.println("hashCode until changing "+st1.hashCode());
+        System.out.println("hashMap contains st1? Answer: "+map.containsKey(st1));
+        st1.course = 4;
+        System.out.println("hashCode after changing "+st1.hashCode());
+        System.out.println("hashMap contains st1? Answer: "+map.containsKey(st1)); // !! уже не содержит ключ, поменялся hashCode!!
 
     }
 }
