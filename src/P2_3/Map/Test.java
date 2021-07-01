@@ -42,6 +42,17 @@ public class Test {
         System.out.println("___containsKey___");
 
 
+        keySetIteration(map1);
+
+
 
     }
+
+    private static void keySetIteration(Map<Integer, String> map1) {
+        for (Map.Entry<Integer, String> elements : map1.entrySet()) {
+            System.out.println(elements.getKey() + ":" + elements.getValue());
+        }
+    }
+
+
 }
