@@ -3,6 +3,7 @@ package P2_6_Lambdas.Lamb1;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.function.Predicate;
 
 public class Students {
     public Students(String name, char sex, int age, int course, double avrGrade) {
@@ -27,38 +28,20 @@ public class Students {
 
 class StudentInfo{
 
-    void checkAllStudents(ArrayList<Students> al, StudentsChecks sch){
-        for(Students s:al){
-            if(sch.check(s)){
-                System.out.println(s);
+//    void checkAllStudents(ArrayList<Students> al, StudentsChecks sch){
+//        for(Students s:al){
+//            if(sch.check(s)){
+//                System.out.println(s);
+//            }
+//        }
+//    }
+        void checkAllStudents(ArrayList<Students> al, Predicate<Students> sts){
+            for(Students s:al){
+                if(sts.test(s)){
+                    System.out.println(s); //тоже самое, что верхний метод, но с Predicate
+                }
             }
         }
-    }
-
-//    void printStudentOverGrade(ArrayList<Students> al, double avrGrade){
-//        for(Students s:al){
-//            if(s.avrGrade > 4){
-//                System.out.println(s);
-//            }
-//        }
-//    }
-//
-//    void printStudentUnderAge(ArrayList<Students> al, int age){
-//        for(Students s:al){
-//            if(s.age > 3){
-//                System.out.println(s);
-//            }
-//        }
-//    }
-//
-//    void printStudentMix(ArrayList<Students> al, int age, double avrGrade, char sex){
-//        for(Students s:al){
-//            if(s.age > 30 && s.avrGrade > 3 && s.sex == 'm'){
-//                System.out.println(s);
-//            }
-//        }
-//    }
-
 }
 
 class Test {
@@ -79,28 +62,30 @@ class Test {
         studList.add(st5);
 
         StudentInfo info = new StudentInfo();
-//        info.checkAllStudents(studList, new CheckOverGrade());
-//        info.checkAllStudents(studList, new StudentsChecks() {
-//            @Override
-//            public boolean check(Students s) {
-//                return s.age < 30;
-//            }
-//        });
+
         info.checkAllStudents(studList,(Students s) -> {return s.age < 30;});
         info.checkAllStudents(studList, s -> s.age < 30);
         info.checkAllStudents(studList, (Students s) -> s.age < 30);
         info.checkAllStudents(studList, s -> {return s.age < 30;});
         info.checkAllStudents(studList,(Students s) -> {return s.avrGrade < 3;});
         System.out.println("_________________");
-        Collections.sort(studList, (o1, o2) -> {return o1.age- o2.age;});
+        System.out.println("_________________");
 
-        System.out.println(studList);
+        Predicate<Students> st = students -> students.age > 30;
+        Predicate<Students> st33 = students -> students.avrGrade < 5;
+        info.checkAllStudents(studList,st);
+        info.checkAllStudents(studList,st33);
 
-//        info.printStudentOverGrade(studList, 3);
-//        System.out.println("_________________");
-//        info.printStudentUnderAge(studList,30);
-//        System.out.println("_________________");
-//        info.printStudentMix(studList,30, 4, 'm');
+        System.out.println("_________________");
+        System.out.println("_________________");
+
+        info.checkAllStudents(studList,st33.and(st));
+        info.checkAllStudents(studList,st33.or(st));
+        info.checkAllStudents(studList,st33.negate());
+
+//        Collections.sort(studList, (o1, o2) -> {return o1.age- o2.age;});
+
+
 
     }
 }
@@ -108,10 +93,3 @@ class Test {
 interface StudentsChecks{
     boolean check (Students s);
 }
-
-//class CheckOverGrade implements StudentsChecks{
-//    @Override
-//    public boolean check(Students s) {
-//        return s.avrGrade > 4;
-//    }
-//}
