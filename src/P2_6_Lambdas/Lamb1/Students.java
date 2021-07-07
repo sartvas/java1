@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.function.Predicate;
+import java.util.function.Function;
 
 public class Students {
     public Students(String name, char sex, int age, int course, double avrGrade) {
@@ -42,6 +43,7 @@ class StudentInfo{
                 }
             }
         }
+
 }
 
 class Test {
@@ -85,8 +87,19 @@ class Test {
 
 //        Collections.sort(studList, (o1, o2) -> {return o1.age- o2.age;});
 
+        System.out.println("___*Function*___");
+        double res = avgSmth(studList, students -> students.avrGrade);
+        System.out.println(res);
 
+    }
 
+    private static double avgSmth (ArrayList<Students> list, Function<Students, Double> f){
+        double result = 0;
+        for (Students s:list) {
+            result += f.apply(s);
+        }
+        result = result / list.size();
+        return result;
     }
 }
 
