@@ -3,6 +3,7 @@ package P2_7_Streams.Collect;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -15,6 +16,7 @@ public class Collect {
         Map<Boolean, List<Integer>> map = s.collect(Collectors.partitioningBy(e -> e>30));
         System.out.println(map);
 
+
         Car c1 = new Car("Toyota", 2.3);
         Car c2 = new Car("Lada", 1.8);
         Car c3 = new Car("Kia", 2.0);
@@ -23,6 +25,9 @@ public class Collect {
         carList.add(c1);
         carList.add(c2);
         carList.add(c3);
+
+        Car answer = carList.stream().findFirst().get();
+        System.out.println("answer is "+answer);
 
         Map<Double, List<Car>> mapCar = carList.stream().collect(Collectors.groupingBy(e -> e.getEngine()));
         for (Map.Entry<Double, List<Car>> entry:mapCar.entrySet()) {

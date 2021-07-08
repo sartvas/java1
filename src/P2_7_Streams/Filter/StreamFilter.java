@@ -23,6 +23,18 @@ public class StreamFilter {
         list2 = list.stream().sorted((x,y) -> x.getName().compareTo(y.getName())).collect(Collectors.toList());
 
         System.out.println(list2);
+
+        Students findMin = list.stream().min((x,y) -> x.getAge()-y.getAge()).get();
+        System.out.println("findMin is --> "+findMin);
+
+        Students findMax = list.stream().max((x,y) -> x.getAge()-y.getAge()).get();
+        System.out.println("findMax is --> "+findMax);
+
+        List<Integer> mapToInt = list.stream().mapToInt(el -> el.getCourse()).boxed().collect(Collectors.toList());
+        System.out.println("mapToInt is "+mapToInt);
+
+        double averageAll = list.stream().mapToDouble(el -> el.getGrade()).average().getAsDouble();
+        System.out.println("averageAll is "+averageAll );
     }
 }
 
