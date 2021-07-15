@@ -2,11 +2,20 @@ package P2_8_Multithreading.DataRaceSynchronized;
 
 //DataRace - проблема, при которой некскольо потоко обращ. к 1 переменной и как минимум 1 поток ее меняет.
 //synchronized лочит метод для первого шустрого потока
+//synchronized можно использовать как на всём блоке, так и части метода
 
 public class Test {
     static int count = 0;
-    public synchronized static void increment(){
+    public  static void deincrement(){
+        System.out.println("DICREM");
+    }
+    //public synchronized static void increment(){ - synchronized на всём блоке
+    public static void increment(){
+        deincrement();
+        synchronized (Test.class){ // - synchronized на части блока
         count++;
+        System.out.println(count);
+        }
     }
 
     public static void main(String[] args) throws InterruptedException {
@@ -26,8 +35,7 @@ public class Test {
 class FastThread implements Runnable{
     @Override
     public void run() {
-        for (int i = 0; i<1000; i++){
+        for (int i = 0; i<1000; i++)
             Test.increment();
-        }
     }
 }
