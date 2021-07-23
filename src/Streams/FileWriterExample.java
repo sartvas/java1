@@ -1,4 +1,4 @@
-package P2_8_Multithreading.Streams;
+package Streams;
 
 import java.io.FileWriter;
 import java.io.IOException;
