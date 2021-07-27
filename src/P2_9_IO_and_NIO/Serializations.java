@@ -1,4 +1,4 @@
-package Streams;
+package P2_9_IO_and_NIO;
 
 import java.io.*;
 import java.util.ArrayList;

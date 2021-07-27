@@ -1,7 +1,6 @@
-package Streams;
+package P2_9_IO_and_NIO;
 
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 

@@ -1,7 +1,9 @@
-package Streams;
+package P2_9_IO_and_NIO;
 
 import java.io.IOException;
 import java.io.RandomAccessFile;
+
+//RandomAccessFiles позволяет записывать инфу в любое место файла и читать из любого места файла.
 
 public class RandomAccessFiles {
     public static void main(String[] args) throws IOException {
