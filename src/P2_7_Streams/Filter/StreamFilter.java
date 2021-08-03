@@ -1,7 +1,6 @@
 package P2_7_Streams.Filter;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 

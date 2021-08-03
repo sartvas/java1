@@ -1,7 +1,6 @@
 package P2_3.BinarySearch;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 
 public class Tests {

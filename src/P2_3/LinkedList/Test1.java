@@ -1,7 +1,6 @@
 package P2_3.LinkedList;
 
 import java.util.LinkedList;
-import java.util.Objects;
 
 public class Test1 {
     public static void main(String[] args) {

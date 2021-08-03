@@ -35,6 +35,8 @@ public class Test1 {
                 "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia \n" +
                 "eserunt mollit anim id est laborum.";
 
-        ByteBuffer buffer2 = ByteBuffer.allocate(lorem.getBytes().length);
+        ByteBuffer buffer2 = ByteBuffer.wrap(lorem.getBytes(StandardCharsets.UTF_8));
+        channel.write(buffer2);
+        System.out.println(buffer2);
     }
 }

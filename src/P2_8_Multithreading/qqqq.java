@@ -1,7 +1,5 @@
 package P2_8_Multithreading;
 
-import java.util.concurrent.TransferQueue;
-
 public class qqqq {
     public static void main(String[] args) {
         Thread tread2 = new Thread(new MyThread2());

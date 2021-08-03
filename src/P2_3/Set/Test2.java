@@ -2,9 +2,7 @@ package P2_3.Set;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.HashSet;
 import java.util.Objects;
-import java.util.Set;
 import java.util.TreeSet;
 
 //В TreeSet нельзя добавить объект в виде ключа без имплиментации Comparable и

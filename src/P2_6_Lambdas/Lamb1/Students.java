@@ -1,8 +1,6 @@
 package P2_6_Lambdas.Lamb1;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
 import java.util.function.Predicate;
 import java.util.function.Function;
 
