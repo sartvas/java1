@@ -69,4 +69,5 @@ class NameComarator implements Comparator<MyFriends>{
     public int compare(MyFriends fr1, MyFriends fr2){
         return fr1.name.compareTo(fr2.name);
     }
+    //если нужно сравнить по String, то нужен такой return
 }
