@@ -77,6 +77,6 @@ class CompareLable implements Comparator<MyCars> {
 
     @Override
     public int compare(MyCars lable1, MyCars lable2) {
-        return (lable1.lable.compareTo(lable2.lable));
+        return (lable1.lable.compareTo(lable2.lable)); //must to compare to string
     }
 }
