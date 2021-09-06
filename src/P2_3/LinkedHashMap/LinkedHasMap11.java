@@ -15,14 +15,7 @@ public class LinkedHasMap11 {
             Student st6 = new Student("Olga", "Verdana", 5);
             Student st7 = new Student("Anna", "Arialova", 2);
 
-            lhm.put(1.8, st7);
-            lhm.put(5.8, st1);
-            lhm.put(3.8, st2);
-            lhm.put(3.9, st3);
-
             chekEvryElements(lhm);
-            System.out.println(lhm.get(1.8));
-            System.out.println(lhm.get(3.8));
             chekEvryElements(lhm);
 
 
